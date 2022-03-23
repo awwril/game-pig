@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+body,
+input,
+button,
+textarea {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#753682), to(#bf2e34));
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+}
+
+.hidden {
+  display: none;
+}
+
+._active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+._active .player__name {
+  font-weight: 700;
+}
+._active .player__score {
+  font-weight: 400;
+}
+._active .current {
+  opacity: 1;
+}
+
+.main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  -webkit-filter: blur();
+          filter: blur();
+  border-radius: 9px;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.player {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  padding: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.75s;
+  transition: all 0.75s;
+}
+.player__name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.player__score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+.player__current {
+  background-color: #c7365f;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  -webkit-transition: all 0.75s;
+  transition: all 0.75s;
+}
+
+.current__label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+.current__score {
+  font-size: 3.5rem;
+}
+
+.plalyer__winner {
+  background-color: #2f2f2f;
+}
+.plalyer__winner .player__name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.image {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 16.5rem;
+  height: 10rem;
+  -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #444;
+  background: none;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 50rem;
+  padding: 0.7rem 2.5rem;
+  -webkit-box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn::first-letter {
+  margin-right: 0.7rem;
+  font-size: 2.4rem;
+  display: inline-block;
+}
+.btn:active {
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-transform: translate(-50%, 3px);
+          transform: translate(-50%, 3px);
+}
+
+.btn-new-game {
+  top: 4rem;
+}
+
+.btn-roll-dice {
+  top: 39.3rem;
+}
+
+.btn-hold {
+  top: 46.1rem;
+}
